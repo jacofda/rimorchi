@@ -9,11 +9,25 @@ export interface TrailerContent {
   portata: number;
   component: string;
   furgonato: boolean;
-  description: string | null;
+  description: any;
   numero_assi: string;
   larghezza_utile: number;
   lunghezza_utile: number;
   _editable: string;
+  foto: Foto[];
+}
+
+export interface Foto {
+  id: number;
+  alt: string;
+  name: string;
+  focus: string;
+  title: string;
+  source: string;
+  filename: string;
+  copyright: string;
+  fieldtype: string;
+  meta_data: any;
 }
 
 export const load: PageLoad = async ({ parent }) => {

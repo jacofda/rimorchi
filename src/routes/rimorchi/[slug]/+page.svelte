@@ -1,8 +1,11 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
+  import { richTextResolver } from '@storyblok/richtext';
 
   export let data: PageData;
+
+  const resolver = richTextResolver();
 
   const printValue = (key: string, value: any) => {
     if (typeof value === 'boolean') {
@@ -53,10 +56,10 @@
 
       <!-- Description -->
       {#if data.trailer.content.description}
-        <div class="mx-auto max-w-lg rounded-lg bg-white p-4 shadow-lg">
-          <p class="text-base leading-relaxed text-gray-700">
-            {data.trailer.content.description}
-          </p>
+        <div class="mx-auto max-w-2xl rounded-lg bg-white p-4 shadow-lg">
+          <div class="prose prose-gray max-w-none text-base leading-relaxed text-gray-700">
+            {@html resolver.render(data.trailer.content.description)}
+          </div>
         </div>
       {/if}
 
@@ -127,7 +130,7 @@
       <table class="w-full">
         <tbody class="divide-y divide-gray-200">
           {#each Object.entries(data.trailer.content) as [key, value]}
-            {#if !key.startsWith('_') && key !== 'component' && key !== 'pic' && key !== 'ruote' && key !== 'numero_assi' && key !== 'description'}
+            {#if !key.startsWith('_') && key !== 'component' && key !== 'pic' && key !== 'ruote' && key !== 'numero_assi' && key !== 'description' && key !== 'foto' && key !== 'name'}
               <tr class="transition-colors hover:bg-gray-50">
                 <td class="p-6 font-medium text-gray-700 capitalize">
                   {key.replace(/_/g, ' ')}
@@ -141,5 +144,36 @@
         </tbody>
       </table>
     </div>
+    {#if data.trailer.content.foto?.length}
+      <div class="col-span-full mt-16">
+        <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+          <div
+            class="from-secondary via-secondary/50 to-secondary relative overflow-hidden bg-linear-to-r p-6"
+          >
+            <div
+              class="absolute inset-0 bg-linear-to-br from-transparent via-white/10 to-transparent"
+            ></div>
+            <div class="relative">
+              <h2 class="text-2xl font-bold text-white drop-shadow-md">Galleria Fotografica</h2>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 p-6 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            {#each data.trailer.content.foto as photo}
+              <div
+                class="overflow-hidden rounded-lg shadow-md transition-transform hover:scale-105"
+              >
+                <img
+                  src={`${photo.filename}`}
+                  alt={`Foto del rimorchio ${data.trailer.name}`}
+                  class="h-auto w-full object-cover"
+                />
+              </div>
+            {/each}
+          </div>
+        </div>
+      </div>
+    {/if}
+    <div class="col-span-full"></div>
   </main>
 </div>
