@@ -1,1 +1,10 @@
 @import 'tailwindcss';
+
+@theme{
+    --color-primary: #ffc601; /* Yellow */
+    --color-secondary: #3481b7; /* Blue */
+
+    /* add text-xs */
+    --font-size-xs: 0.75rem; /* 12px */
+
+}
