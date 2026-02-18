@@ -16,6 +16,7 @@
   const links = [
     { name: 'Chi Siamo', href: '/chi-siamo' },
     { name: 'Rimorchi', href: '/rimorchi' },
+    { name: 'Articoli', href: '/articoli' },
     { name: 'Contatti', href: '/contatti' },
   ];
 </script>
@@ -54,7 +55,7 @@
         {#each links as link}
           <a
             href={link.href}
-            class="hover:text-primary font-semibold transition-all hover:scale-105"
+            class="hover:text-tertiary font-semibold transition-all hover:scale-105"
           >
             {link.name}
           </a>
@@ -161,18 +162,34 @@
           <p class="font-semibold text-white">OFFICINE MECCANICHE GIACOMELLA</p>
           <div class="space-y-2">
             <p class="flex items-start gap-2">
-              <span class="text-primary">📍</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                class="size-5 fill-white"
+              >
+                <path
+                  d="M576 90.7L576 64.7L552.8 76.4L416.9 144.8L230.6 82.7L224.6 80.7L218.9 83.3L73.3 149.4L63.9 153.7L63.9 575.4L87.1 563.7L223 495.3L409.3 557.4L415.3 559.4L421 556.8L566.6 490.7L576 486.4L576 90.7zM432 173L544 116.6L544 465.8L432 516.6L432 173zM400 172.8L400 520.5L240 467.2L240 119.5L400 172.8zM208 467L96 523.4L96 174.2L208 123.4L208 467z"
+                /></svg
+              >
               <span>Frazione Tollo 6, 38055 Grigno (TN)</span>
             </p>
             <p class="flex items-center gap-2">
               <span class="text-primary">📞</span>
-              <a href="tel:0461765169" class="hover:text-primary transition-colors">0461 765169</a>
+              <a href="tel:0461765169" class="hover:text-tertiary transition-colors">0461 765169</a>
             </p>
             <p class="flex items-center gap-2">
-              <span class="text-primary">✉️</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                class="size-5 fill-white"
+              >
+                <path
+                  d="M80 128L64 128L64 512L576 512L576 128L80 128zM544 184L544 199.9L320 364.2L96 199.9L96 160L544 160L544 184zM544 239.6L544 480L96 480L96 239.6L310.5 396.9L320 403.8L329.5 396.9L544 239.6z"
+                /></svg
+              >
               <a
                 href="mailto:giacomella.rimorchi@gmail.com"
-                class="hover:text-primary transition-colors"
+                class="hover:text-tertiary transition-colors"
               >
                 giacomella.rimorchi@gmail.com
               </a>
@@ -231,15 +248,25 @@
           <a
             href="https://www.google.it/maps/place/O.M.G.+Officine+Meccaniche+Giacomella/@46.023444,11.5910473,17z/data=!3m1!4b1!4m2!3m1!1s0x4778934a79038233:0x208cae1f9749c7c4"
             target="_blank"
+            title="O.M.G. Officine Meccaniche Giacomella su Google Maps"
             class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
           >
-            <span class="text-xl">📍</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-5 fill-white">
+              <path
+                d="M576 90.7L576 64.7L552.8 76.4L416.9 144.8L230.6 82.7L224.6 80.7L218.9 83.3L73.3 149.4L63.9 153.7L63.9 575.4L87.1 563.7L223 495.3L409.3 557.4L415.3 559.4L421 556.8L566.6 490.7L576 486.4L576 90.7zM432 173L544 116.6L544 465.8L432 516.6L432 173zM400 172.8L400 520.5L240 467.2L240 119.5L400 172.8zM208 467L96 523.4L96 174.2L208 123.4L208 467z"
+              /></svg
+            >
           </a>
           <a
             href="mailto:giacomella.rimorchi@gmail.com"
+            title="email"
             class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
           >
-            <span class="text-xl">✉️</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-5 fill-white">
+              <path
+                d="M80 128L64 128L64 512L576 512L576 128L80 128zM544 184L544 199.9L320 364.2L96 199.9L96 160L544 160L544 184zM544 239.6L544 480L96 480L96 239.6L310.5 396.9L320 403.8L329.5 396.9L544 239.6z"
+              /></svg
+            >
           </a>
         </div>
       </div>

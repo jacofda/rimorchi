@@ -21,70 +21,70 @@
           <div class="mx-auto h-1 w-32 rounded-full bg-white/50"></div>
         </div>
       </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <!-- Company Overview -->
+        <div class="from-tertiary/5 to-primary/5 rounded-2xl bg-linear-to-br p-8 shadow-lg">
+          <h3
+            class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-center text-2xl font-bold text-transparent xl:text-3xl"
+          >
+            La Nostra Azienda Oggi
+          </h3>
+          <p class="text-justify text-base leading-relaxed text-gray-700">
+            La nuova ditta
+            <strong class="text-secondary">O.M.G. OFFICINE MECCANICHE GIACOMELLA</strong> con sede sempre
+            in Valsugana a Grigno (TN) a conduzione famigliare è capitanata dal figlio Giacomella Attilio
+            ma con la supervisione del fondatore del marchio VS il Sig. Giacomella Alfeo continua la costruzione
+            delle Caravan e Camper.
+          </p>
+        </div>
 
-      <!-- Company Overview -->
-      <div class="rounded-2xl bg-white p-8 shadow-lg">
-        <h3
-          class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-xl font-bold text-transparent"
-        >
-          La Nostra Azienda Oggi
-        </h3>
-        <p class="text-base leading-relaxed text-gray-700">
-          La nuova ditta
-          <strong class="text-secondary">O.M.G. OFFICINE MECCANICHE GIACOMELLA</strong> con sede sempre
-          in Valsugana a Grigno (TN) a conduzione famigliare è capitanata dal figlio Giacomella Attilio
-          ma con la supervisione del fondatore del marchio VS il Sig. Giacomella Alfeo continua la costruzione
-          delle Caravan e Camper.
-        </p>
-      </div>
+        <!-- Production Philosophy -->
+        <div class=" from-secondary/5 to-primary/5 rounded-2xl bg-linear-to-br p-8 shadow-lg">
+          <h3
+            class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-center text-2xl font-bold text-transparent xl:text-3xl"
+          >
+            Costruzione Su Misura
+          </h3>
+          <p class="text-justify text-base leading-relaxed text-gray-700">
+            <strong class="text-secondary"
+              >La costruzione dei mezzi viene effettuata su richiesta</strong
+            >, facendo sì che ogni mezzo costruito nella nostra officina sia un pezzo unico.
+            Ascoltando consigli ed esigenze dei propri clienti ancora affezionati al mitico marchio
+            VS che nonostante il tempo e gli anni passati tengono le loro caravan come gioielli.
+          </p>
+        </div>
 
-      <!-- Production Philosophy -->
-      <div class=" from-secondary/5 to-primary/5 rounded-2xl bg-linear-to-br p-8 shadow-lg">
-        <h3
-          class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-xl font-bold text-transparent"
-        >
-          Costruzione Su Misura
-        </h3>
-        <p class="text-base leading-relaxed text-gray-700">
-          <strong class="text-secondary"
-            >La costruzione dei mezzi viene effettuata su richiesta</strong
-          >, facendo sì che ogni mezzo costruito nella nostra officina sia un pezzo unico.
-          Ascoltando consigli ed esigenze dei propri clienti ancora affezionati al mitico marchio VS
-          che nonostante il tempo e gli anni passati tengono le loro caravan come gioielli.
-        </p>
-      </div>
+        <!-- Heritage & Style -->
+        <div class="from-tertiary/5 to-primary/5 rounded-2xl bg-linear-to-br p-8 shadow-lg">
+          <h3
+            class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-center text-2xl font-bold text-transparent xl:text-3xl"
+          >
+            Il Marchio VS - Tradizione e Qualità
+          </h3>
+          <p class="text-justify text-base leading-relaxed text-gray-700">
+            Il Signor Giacomella Alfeo, costruttore ed inventore del marchio VS, ha dato alla storia
+            della Caravan una sua linea particolare, mantenendola fino ai giorni nostri. Con
+            determinazione, nonostante i cambiamenti avvenuti negli anni nella costruzione di
+            caravan, con la stessa forma indimenticabile un po' "retrò" che la contraddistingue
+            dalle altre marche.
+          </p>
+        </div>
 
-      <!-- Heritage & Style -->
-      <div class="rounded-2xl bg-white p-8 shadow-lg">
-        <h3
-          class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-xl font-bold text-transparent"
-        >
-          Il Marchio VS - Tradizione e Qualità
-        </h3>
-        <p class="text-base leading-relaxed text-gray-700">
-          Il Signor Giacomella Alfeo, costruttore ed inventore del marchio VS, ha dato alla storia
-          della Caravan una sua linea particolare, mantenendola fino ai giorni nostri. Con
-          determinazione, nonostante i cambiamenti avvenuti negli anni nella costruzione di caravan,
-          ha voluto mantenere la stessa struttura, lo stesso metodo di costruzione, gli stessi
-          accorgimenti, con la stessa forma indimenticabile un po' "retrò" che la contraddistingue
-          dalle altre marche.
-        </p>
-      </div>
-
-      <!-- Current Production -->
-      <div class="from-secondary/5 to-primary/5 rounded-2xl bg-linear-to-br p-8 shadow-lg">
-        <h3
-          class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-xl font-bold text-transparent"
-        >
-          La Nostra Produzione
-        </h3>
-        <p class="text-base leading-relaxed text-gray-700">
-          La ditta O.M.G., costruttrice del marchio VS, lavora ancora in Valsugana, costruendo le
-          <strong class="text-secondary">Caravan VS</strong>, i
-          <strong class="text-secondary">Camper VS</strong> e
-          <strong class="text-secondary">Rimorchi O.M.G.</strong> per il trasporto di cose e mezzi speciali
-          fatti su richiesta del cliente.
-        </p>
+        <!-- Current Production -->
+        <div class="from-secondary/5 to-primary/5 rounded-2xl bg-linear-to-br p-8 shadow-lg">
+          <h3
+            class="from-secondary to-secondary/80 mb-4 bg-linear-to-r bg-clip-text text-center text-2xl font-bold text-transparent xl:text-3xl"
+          >
+            La Nostra Produzione
+          </h3>
+          <p class="text-justify text-base leading-relaxed text-gray-700">
+            La ditta O.M.G., costruttrice del marchio VS, lavora ancora in Valsugana, costruendo le
+            <strong class="text-secondary">Caravan VS</strong>, i
+            <strong class="text-secondary">Camper VS</strong> e
+            <strong class="text-secondary">Rimorchi O.M.G.</strong> per il trasporto di cose e mezzi speciali
+            fatti su richiesta del cliente.
+          </p>
+        </div>
       </div>
     </div>
 
