@@ -27,7 +27,7 @@
 />
 
 <div class="container mx-auto px-4 py-16">
-  <section>
+  <section class="pb-10">
     <!-- Filter buttons with gradient effects -->
     <div class="mb-12 flex flex-wrap justify-center gap-3">
       <button

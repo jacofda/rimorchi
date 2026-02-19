@@ -69,142 +69,176 @@
   breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Rimorchi' }]}
 />
 
-<div class="container mx-auto px-4 py-16">
-  <section>
-    <!-- Filter buttons with gradient effects -->
-    <div class="mb-12 flex flex-wrap justify-center gap-3">
-      <button
-        class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
-          activeFilter === 'tutti'
-            ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
-            : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
-        }`}
-        on:click={() => (activeFilter = 'tutti')}
-      >
-        Tutti
-      </button>
-      <button
-        class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
-          activeFilter === '1-asse'
-            ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
-            : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
-        }`}
-        on:click={() => (activeFilter = '1-asse')}
-      >
-        1 Asse
-      </button>
-      <button
-        class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
-          activeFilter === '2-assi'
-            ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
-            : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
-        }`}
-        on:click={() => (activeFilter = '2-assi')}
-      >
-        2 Assi
-      </button>
-      <button
-        class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
-          activeFilter === 'furgonati'
-            ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
-            : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
-        }`}
-        on:click={() => (activeFilter = 'furgonati')}
-      >
-        Furgonati
-      </button>
+<!-- Main content with square pattern background -->
+<div class="relative bg-linear-to-b from-white via-gray-50 to-white py-16">
+  <!-- Decorative Square Pattern Background -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <svg
+      class="stroke-secondary/5 absolute top-0 left-[50%] h-full w-full -translate-x-1/2"
+      aria-hidden="true"
+    >
+      <defs>
+        <pattern
+          id="rimorchi-pattern"
+          width="200"
+          height="200"
+          x="50%"
+          y="0"
+          patternUnits="userSpaceOnUse"
+        >
+          <path d="M100 200V.5M.5 .5H200" fill="none" stroke-width="1" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#rimorchi-pattern)" />
+    </svg>
+  </div>
+
+  <div class="relative container mx-auto px-4">
+    <!-- Filter buttons -->
+    <div class="mb-16">
+      <div class="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+        <h3 class="mb-4 text-center text-lg font-semibold text-gray-900">Filtra per categoria</h3>
+        <div class="flex flex-wrap justify-center gap-3">
+          <button
+            class={`rounded-xl px-6 py-3 font-semibold transition-all duration-300 ${
+              activeFilter === 'tutti'
+                ? 'bg-secondary ring-secondary/50 scale-105 text-white shadow-lg ring-2 ring-offset-2'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
+            }`}
+            on:click={() => (activeFilter = 'tutti')}
+          >
+            Tutti i Rimorchi
+          </button>
+          <button
+            class={`rounded-xl px-6 py-3 font-semibold transition-all duration-300 ${
+              activeFilter === '1-asse'
+                ? 'bg-primary ring-primary/50 scale-105 text-white shadow-lg ring-2 ring-offset-2'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
+            }`}
+            on:click={() => (activeFilter = '1-asse')}
+          >
+            1 Asse
+          </button>
+          <button
+            class={`rounded-xl px-6 py-3 font-semibold transition-all duration-300 ${
+              activeFilter === '2-assi'
+                ? 'bg-tertiary ring-tertiary/50 scale-105 text-white shadow-lg ring-2 ring-offset-2'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
+            }`}
+            on:click={() => (activeFilter = '2-assi')}
+          >
+            2 Assi
+          </button>
+          <button
+            class={`rounded-xl px-6 py-3 font-semibold transition-all duration-300 ${
+              activeFilter === 'furgonati'
+                ? 'bg-secondary ring-secondary/50 scale-105 text-white shadow-lg ring-2 ring-offset-2'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
+            }`}
+            on:click={() => (activeFilter = 'furgonati')}
+          >
+            Furgonati
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- Trailers list with modern gradient design -->
-    {#each Object.entries(filteredStories) as [pic, trailers]}
-      <div
-        class="mb-12 overflow-hidden rounded-2xl bg-white shadow-xl transition-all hover:shadow-2xl"
-      >
-        <div class="grid grid-cols-1 gap-8 p-8 md:grid-cols-12">
-          <!-- Image -->
-          <div class="flex items-center justify-center md:col-span-4">
-            <div class="overflow-hidden rounded-xl shadow-lg transition-transform hover:scale-105">
-              <img
-                src={imagesByPic[pic as keyof typeof imagesByPic]}
-                alt="Rimorchio tipo {pic}"
-                class="h-auto w-full"
-              />
+    <!-- Trailers grid - 2 cards per row on large screens -->
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {#each Object.entries(filteredStories) as [pic, trailers]}
+        <div class="group relative">
+          <!-- Card container -->
+          <div
+            class="hover:ring-secondary/20 flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-500 hover:shadow-2xl"
+          >
+            <!-- Image section - now on top -->
+            <div class="relative overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 p-8">
+              <div
+                class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5 transition-transform duration-500 group-hover:scale-105"
+              >
+                <img
+                  src={imagesByPic[pic as keyof typeof imagesByPic]}
+                  alt="Rimorchio tipo {pic}"
+                  class="mx-auto h-auto w-60"
+                />
+              </div>
+              <!-- Decorative element -->
+              <div
+                class="bg-secondary/5 absolute -top-12 -right-12 h-48 w-48 rounded-full blur-3xl"
+              ></div>
             </div>
-          </div>
 
-          <!-- Table -->
-          <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm md:col-span-8">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr
-                    class="from-secondary/10 to-primary/10 border-b-2 border-gray-200 bg-linear-to-r"
+            <!-- Details section - now below image -->
+            <div class="flex flex-1 flex-col p-8">
+              <div class="mb-4">
+                <div
+                  class="bg-secondary/10 text-secondary mb-2 inline-block rounded-lg px-4 py-1 text-sm font-semibold"
+                >
+                  Serie {pic}
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Modelli Disponibili</h3>
+              </div>
+
+              <!-- Models list -->
+              <div class="flex-1 space-y-3">
+                {#each trailers as trailer}
+                  <a
+                    href="/rimorchi/{trailer.slug}"
+                    class="group/item hover:border-secondary/50 block rounded-xl border border-gray-200 bg-linear-to-br from-white to-gray-50 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <th class="px-5 py-4 text-left text-sm font-bold text-gray-800"> Modello </th>
-                    <th class="px-5 py-4 text-left text-sm font-bold text-gray-800">
-                      Portata <span class="text-xs font-normal text-gray-600">(kg)</span>
-                    </th>
-                    <th
-                      class="hidden px-5 py-4 text-left text-sm font-bold text-gray-800 sm:table-cell"
-                    >
-                      Tara <span class="text-xs font-normal text-gray-600">(kg)</span>
-                    </th>
-                    <th
-                      class="hidden px-5 py-4 text-left text-sm font-bold text-gray-800 md:table-cell"
-                    >
-                      Larghezza <span class="text-xs font-normal text-gray-600">(m)</span>
-                    </th>
-                    <th
-                      class="hidden px-5 py-4 text-left text-sm font-bold text-gray-800 md:table-cell"
-                    >
-                      Lunghezza <span class="text-xs font-normal text-gray-600">(m)</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="bg-white">
-                  {#each trailers as trailer}
-                    <tr
-                      class="hover:from-secondary/5 hover:to-primary/5 border-b border-gray-100 transition-all hover:bg-linear-to-r"
-                    >
-                      <td class="px-5 py-4 text-xs sm:text-sm lg:text-base">
-                        <a
-                          href="/rimorchi/{trailer.slug}"
-                          class="from-secondary to-secondary/80 group inline-flex items-center gap-2 rounded-lg bg-linear-to-r px-4 py-2 font-semibold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg md:rounded-none md:bg-none md:px-0 md:py-0 md:text-gray-900 md:shadow-none md:hover:scale-100 md:hover:bg-linear-to-r md:hover:bg-clip-text md:hover:text-transparent hover:lg:shadow-none"
+                    <div class="mb-3 flex items-center justify-between">
+                      <h4 class="group-hover/item:text-secondary text-lg font-bold text-gray-900">
+                        {trailer.name}
+                      </h4>
+                      <svg
+                        class="text-secondary h-5 w-5 transition-transform group-hover/item:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </div>
+
+                    <!-- Specifications grid -->
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                      <div class="flex flex-col">
+                        <span class="text-xs font-medium text-gray-500">Portata</span>
+                        <span class="text-primary text-sm font-bold"
+                          >{trailer.content.portata} kg</span
                         >
-                          {trailer.name}
-                          <svg
-                            class="md:text-secondary h-5 w-5 transition-transform group-hover:translate-x-1 md:h-4 md:w-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </a>
-                      </td>
-                      <td class="px-5 py-4 font-medium text-gray-700">{trailer.content.portata}</td>
-                      <td class="hidden px-5 py-4 font-medium text-gray-700 sm:table-cell"
-                        >{trailer.content.tara}</td
-                      >
-                      <td class="hidden px-5 py-4 font-medium text-gray-700 md:table-cell"
-                        >{trailer.content.larghezza_utile}</td
-                      >
-                      <td class="hidden px-5 py-4 font-medium text-gray-700 md:table-cell"
-                        >{trailer.content.lunghezza_utile}</td
-                      >
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-xs font-medium text-gray-500">Tara</span>
+                        <span class="text-sm font-semibold text-gray-900"
+                          >{trailer.content.tara} kg</span
+                        >
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-xs font-medium text-gray-500">Larghezza</span>
+                        <span class="text-sm font-semibold text-gray-900"
+                          >{trailer.content.larghezza_utile} m</span
+                        >
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-xs font-medium text-gray-500">Lunghezza</span>
+                        <span class="text-sm font-semibold text-gray-900"
+                          >{trailer.content.lunghezza_utile} m</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                {/each}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {/each}
-  </section>
+      {/each}
+    </div>
+  </div>
 </div>

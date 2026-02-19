@@ -4,12 +4,12 @@
 
 <PageHeader
   title="Chi siamo"
-  subtitle="Gli auto caravan dell'officina meccanica Giacomella"
+  subtitle="Gli auto caravan dell'Officina Meccanica Giacomella"
   breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Chi siamo' }]}
 />
 
 <div class="container mx-auto px-4 py-16">
-  <div class="space-y-16">
+  <div class="space-y-16 pb-10">
     <div class="space-y-8">
       <div
         class="from-secondary via-secondary/50 to-secondary mx-auto max-w-2xl overflow-hidden rounded-2xl bg-linear-to-r p-8 shadow-xl"
