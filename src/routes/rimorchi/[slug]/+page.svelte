@@ -34,12 +34,12 @@
 </script>
 
 <svelte:head>
-  <title>{data.trailer.name} - Rimorchi</title>
+  <title>{data.trailer.name} - Rimorchi - Valugana | Officine Meccanica Giacomella</title>
   <meta
     name="description"
     content={`Scopri il rimorchio ${data.trailer.name} e le sue caratteristiche.`}
   />
-  <meta name="keywords" content="rimorchi, trasporti, {data.trailer.name}, veicoli" />
+  <meta name="keywords" content={`rimorchi, trasporti, ${data.trailer.name}, veicoli`} />
 </svelte:head>
 
 <PageHeader

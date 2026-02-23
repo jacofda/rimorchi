@@ -65,7 +65,7 @@
 </script>
 
 <svelte:head>
-  <title>Rimorchi - Gamma completa</title>
+  <title>Rimorchi - Gamma completa | Valugana | Officine Meccanica Giacomella</title>
   <meta
     name="description"
     content="Scopri la gamma completa di rimorchi professionali disponibili sul nostro sito."
