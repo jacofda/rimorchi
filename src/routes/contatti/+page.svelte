@@ -5,8 +5,14 @@
 
 <svelte:head>
   <title>Contatti - Officine Meccaniche Giacomella</title>
-  <meta name="description" content="Contatta le Officine Meccaniche Giacomella per informazioni, richieste e assistenza." />
-  <meta name="keywords" content="contatti, officine meccaniche, giacomella, valsugana, trento, assistenza" />
+  <meta
+    name="description"
+    content="Contatta le Officine Meccaniche Giacomella per informazioni, richieste e assistenza."
+  />
+  <meta
+    name="keywords"
+    content="contatti, officine meccaniche, giacomella, valsugana, trento, assistenza"
+  />
 </svelte:head>
 
 <PageHeader

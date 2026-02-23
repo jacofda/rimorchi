@@ -66,7 +66,10 @@
 
 <svelte:head>
   <title>Rimorchi - Gamma completa</title>
-  <meta name="description" content="Scopri la gamma completa di rimorchi professionali disponibili sul nostro sito." />
+  <meta
+    name="description"
+    content="Scopri la gamma completa di rimorchi professionali disponibili sul nostro sito."
+  />
   <meta name="keywords" content="rimorchi, trasporti, professionali, gamma, veicoli" />
 </svelte:head>
 

@@ -35,7 +35,10 @@
 
 <svelte:head>
   <title>{data.trailer.name} - Rimorchi</title>
-  <meta name="description" content={`Scopri il rimorchio ${data.trailer.name} e le sue caratteristiche.`} />
+  <meta
+    name="description"
+    content={`Scopri il rimorchio ${data.trailer.name} e le sue caratteristiche.`}
+  />
   <meta name="keywords" content="rimorchi, trasporti, {data.trailer.name}, veicoli" />
 </svelte:head>
 

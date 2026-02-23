@@ -5,8 +5,14 @@
 
 <svelte:head>
   <title>Chi Siamo - Officine Meccaniche Giacomella</title>
-  <meta name="description" content="Scopri la storia e la missione delle Officine Meccaniche Giacomella." />
-  <meta name="keywords" content="chi siamo, officine meccaniche, giacomella, azienda, caravan, camper" />
+  <meta
+    name="description"
+    content="Scopri la storia e la missione delle Officine Meccaniche Giacomella."
+  />
+  <meta
+    name="keywords"
+    content="chi siamo, officine meccaniche, giacomella, azienda, caravan, camper"
+  />
 </svelte:head>
 
 <PageHeader
