@@ -23,6 +23,13 @@
 
 <svelte:head>
   <link rel="icon" href={favicon} />
+  <title>Rimorchi su misura in Valsugana | Rimorchi OMG</title>
+  <meta
+    name="description"
+    content="Benvenuto su Rimorchi, il sito dedicato ai rimorchi, articoli e informazioni utili."
+  />
+  <meta name="keywords" content="rimorchi, articoli, chi siamo, contatti, trasporti" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
 <!-- Sticky Navbar with gradient -->
@@ -221,11 +228,26 @@
 
         <div class="flex flex-col gap-2">
           <a
-            href="https://rimorchi.vsomg.it/privacy-policy"
-            class="inline-block rounded-full bg-white/20 px-4 py-2 text-center text-sm font-medium text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
-          >
-            Privacy Policy
-          </a>
+            href="https://www.iubenda.com/privacy-policy/68178934/cookie-policy"
+            class="iubenda-white iubenda-noiframe iubenda-embed w-26!"
+            title="Cookie Policy ">Cookie Policy</a
+          ><script type="text/javascript">
+            (function (w, d) {
+              var loader = function () {
+                var s = d.createElement('script'),
+                  tag = d.getElementsByTagName('script')[0];
+                s.src = 'https://cdn.iubenda.com/iubenda.js';
+                tag.parentNode.insertBefore(s, tag);
+              };
+              if (w.addEventListener) {
+                w.addEventListener('load', loader, false);
+              } else if (w.attachEvent) {
+                w.attachEvent('onload', loader);
+              } else {
+                w.onload = loader;
+              }
+            })(window, document);
+          </script>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import ArticoliList from '../lib/components/ArticoliList.svelte';
+  export let data;
 </script>
 
 <!-- Hero Section -->
@@ -300,3 +302,8 @@
     </div>
   </div>
 </div>
+
+<!-- Latest Articoli Section -->
+<section class="my-12">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8"><ArticoliList articoli={data.articoli} /></div>
+</section>

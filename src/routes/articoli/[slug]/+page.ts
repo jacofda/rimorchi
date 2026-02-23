@@ -34,8 +34,6 @@ export const load: PageLoad = async ({ params, parent }) => {
     version: 'draft',
   });
 
-  console.log('Articolo Detail Response:', response);
-
   return {
     articolo: response.data.story as ArticoloDetailStory,
   };

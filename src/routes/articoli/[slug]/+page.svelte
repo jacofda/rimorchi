@@ -6,7 +6,14 @@
   export let data: PageData;
 
   const resolver = richTextResolver();
+  // ...existing code...
 </script>
+
+<svelte:head>
+  <title>{data.articolo.content.titolo} - Articoli</title>
+  <meta name="description" content={`Leggi l'articolo: ${data.articolo.content.titolo}.`} />
+  <meta name="keywords" content="articoli, rimorchi, trasporti, {data.articolo.content.titolo}" />
+</svelte:head>
 
 <PageHeader
   title={data.articolo.content.titolo}
@@ -19,37 +26,19 @@
 
 <div class="container mx-auto px-4 py-16">
   <main class="mx-auto max-w-4xl">
-    {#if data.articolo.content.tag}
-      <div class="mb-6 flex justify-start">
-        <span
-          class="from-secondary via-secondary/90 to-secondary inline-block rounded-full bg-linear-to-r px-6 py-2 text-sm font-semibold text-white shadow-lg"
-        >
-          {data.articolo.content.tag}
-        </span>
-      </div>
-    {/if}
-
     {#if data.articolo.content.immagine?.filename}
-      <div class="mb-8 overflow-hidden rounded-lg shadow-2xl">
+      <div class="mx-auto mb-8 max-w-2xl overflow-hidden rounded-lg shadow-2xl">
         <img
           src={data.articolo.content.immagine.filename}
           alt={data.articolo.content.immagine.alt || data.articolo.content.titolo}
-          class="h-auto w-full object-cover"
+          class="aspect-2/1 h-auto w-full object-cover"
         />
-      </div>
-    {/if}
-
-    {#if data.articolo.content.abstract}
-      <div class="mb-8 rounded-lg bg-gray-50 p-6 shadow-lg">
-        <p class="text-lg leading-relaxed text-gray-700">
-          {data.articolo.content.abstract}
-        </p>
       </div>
     {/if}
 
     {#if data.articolo.content.descrizione}
       <div class="mb-8 rounded-lg bg-white p-8 shadow-lg">
-        <div class="prose prose-gray max-w-none text-base leading-relaxed text-gray-700">
+        <div class="prose prose-gray html max-w-none text-base leading-relaxed text-gray-700">
           {@html resolver.render(data.articolo.content.descrizione)}
         </div>
       </div>

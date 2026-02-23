@@ -1,6 +1,13 @@
 <script lang="ts">
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
+  // ...existing code...
 </script>
+
+<svelte:head>
+  <title>Chi Siamo - Officine Meccaniche Giacomella</title>
+  <meta name="description" content="Scopri la storia e la missione delle Officine Meccaniche Giacomella." />
+  <meta name="keywords" content="chi siamo, officine meccaniche, giacomella, azienda, caravan, camper" />
+</svelte:head>
 
 <PageHeader
   title="Chi siamo"

@@ -8,3 +8,7 @@
     --font-size-xs: 0.75rem; /* 12px */
 
 }
+.html h3 {
+    @apply text-xl font-semibold text-gray-800 mb-2 mt-4;
+
+}
