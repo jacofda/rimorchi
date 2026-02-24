@@ -77,7 +77,8 @@
               {crumb.label}
             </a>
           {:else}
-            <span class="text-secondary line-clamp-1 truncate font-bold lg:w-52 xl:w-60 2xl:w-68"
+            <span
+              class="text-secondary line-clamp-1 truncate font-bold lg:max-w-52 xl:max-w-60 2xl:max-w-68"
               >{crumb.label}</span
             >
           {/if}

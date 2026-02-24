@@ -1,5 +1,11 @@
 <script lang="ts">
   import favicon from '$lib/assets/favicon.svg';
+
+  import menuCaravan from '$lib/assets/menu-caravan.png';
+  import logoCaravan from '$lib/assets/logo-caravan.png';
+  import logoRimorchi from '$lib/assets/logo-rimorchi.png';
+  import logoCircle from '$lib/assets/logo-circle.png';
+
   import '../app.css';
   let { children } = $props();
 
@@ -50,7 +56,7 @@
           onclick={closeMenu}
         >
           <img
-            src="https://rimorchi.vsomg.it/img/logos/logo.png"
+            src={logoRimorchi}
             alt="Officine Meccaniche Giacomella"
             class="h-12 w-auto md:h-16"
           />
@@ -74,7 +80,7 @@
           title="caravan OMG"
           class="rounded-lg bg-white/20 p-2 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
         >
-          <img src="https://rimorchi.vsomg.it/img/menu-caravan.png" alt="caravan OMG" class="h-8" />
+          <img src={menuCaravan} alt="caravan OMG" class="h-8" />
         </a>
       </div>
 
@@ -150,11 +156,7 @@
       <!-- Company Info -->
       <div class="flex flex-col items-center space-y-4 text-center md:items-start md:text-left">
         <div class="overflow-hidden rounded-full bg-white/20 p-3 backdrop-blur-sm">
-          <img
-            src="https://rimorchi.vsomg.it/img/logos/logo-circle.png"
-            alt="Officine Meccaniche Giacomella"
-            class="h-16 w-auto"
-          />
+          <img src={logoCircle} alt="Officine Meccaniche Giacomella" class="h-16 w-auto" />
         </div>
         <p class="leading-relaxed text-white/90">
           La ditta O.M.G. lavora in Valsugana, costruendo Rimorchi O.M.G. per il trasporto di cose e
@@ -222,7 +224,7 @@
             target="_BLANK"
             class="inline-block overflow-hidden rounded-lg bg-white/20 p-3 backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/30"
           >
-            <img src="https://www.vsomg.it//img/logos/logo.png" alt="OMG Caravan" class="h-12" />
+            <img src={logoCaravan} alt="OMG Caravan" class="h-12" />
           </a>
         </div>
 
