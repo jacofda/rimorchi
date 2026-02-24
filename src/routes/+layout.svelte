@@ -1,5 +1,5 @@
 <script lang="ts">
-  import favicon from '$lib/assets/favicon.svg';
+  import favicon from '$lib/assets/favicon.ico';
 
   import menuCaravan from '$lib/assets/menu-caravan.png';
   import logoCaravan from '$lib/assets/logo-caravan.png';
