@@ -163,10 +163,10 @@
               <dd class="flex-auto">
                 <h3 class="mb-1 text-sm font-semibold text-gray-900">Email</h3>
                 <a
-                  href="mailto:info@omg.com"
+                  href="mailto:giacomella.rimorchi@gmail.com"
                   class="hover:text-tertiary text-base font-medium break-all text-gray-600 transition-colors"
                 >
-                  info@omg.com
+                  giacomella.rimorchi@gmail.com
                 </a>
               </dd>
             </div>

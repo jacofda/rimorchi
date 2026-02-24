@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import RimorchioDoppiaAsse from '$lib/assets/rimorchio-doppia-asse.jpg';
+  import RimorchioSpondeRinforate from '$lib/assets/rimorchio-sponde-rinforzate.jpg';
   import ArticoliList from '../lib/components/ArticoliList.svelte';
   export let data;
 </script>
@@ -39,7 +40,7 @@
     </div>
   </div>
 
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:pt-24 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
         <span class="text-secondary">Rimorchi Personalizzati</span>
@@ -52,7 +53,7 @@
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
         <a
-          href="{base}/rimorchi"
+          href="/rimorchi"
           class="bg-secondary hover:bg-secondary/90 rounded-xl px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
         >
           Scopri i Rimorchi
@@ -64,6 +65,52 @@
           Contattaci
         </a>
       </div>
+    </div>
+  </div>
+
+  <div class="mx-auto mb-16 max-w-5xl px-6">
+    <h2 class="mb-2 text-center text-2xl font-bold text-gray-900 sm:text-3xl">
+      Alcune nostre <span class="text-secondary">produzioni recenti</span>
+    </h2>
+    <p class="text-center text-gray-600">
+      Ecco alcuni esempi di rimorchi realizzati su misura per i nostri clienti: robustezza, cura
+      artigianale e attenzione ai dettagli.
+    </p>
+    <div class="my-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div class="flex flex-col items-center">
+        <img
+          src={RimorchioDoppiaAsse}
+          alt="Rimorchio doppia asse ribaltabile"
+          class="mb-4 h-64 w-full rounded-xl object-cover shadow-lg"
+          loading="lazy"
+        />
+        <div class="text-center text-base font-medium text-gray-700">
+          Rimorchio doppia asse ribaltabile
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img
+          src={RimorchioSpondeRinforate}
+          alt="Rimorchio con sponde rinforzate"
+          class="mb-4 h-64 w-full rounded-xl object-cover shadow-lg"
+          loading="lazy"
+        />
+        <div class="text-center text-base font-medium text-gray-700">
+          Rimorchio con sponde rinforzate
+        </div>
+      </div>
+      <!-- Add a third image if available -->
+      <!--
+      <div class="flex flex-col items-center">
+        <img
+          src="URL_TERZO_RIMORCHIO"
+          alt="Rimorchio modello X"
+          class="rounded-xl shadow-lg object-cover w-full h-64 mb-4"
+          loading="lazy"
+        />
+        <div class="text-base text-gray-700 text-center font-medium">Rimorchio modello X</div>
+      </div>
+      -->
     </div>
   </div>
 </div>
@@ -172,7 +219,7 @@
 
       <!-- Card 3: Costruzione su Misura -->
       <a
-        href="{base}/contatti"
+        href="/contatti"
         class="group hover:ring-tertiary/50 relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       >
         <div class="flex flex-col items-start">
@@ -236,13 +283,13 @@
         </p>
         <div class="mt-8 flex gap-x-4">
           <a
-            href="{base}/contatti"
+            href="/contatti"
             class="bg-secondary hover:bg-secondary/90 rounded-xl px-6 py-3.5 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Contattaci Ora
           </a>
           <a
-            href="{base}/rimorchi"
+            href="/rimorchi"
             class="rounded-xl bg-white px-6 py-3.5 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-gray-900/10 transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
           >
             Vedi i Modelli
