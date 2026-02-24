@@ -2,6 +2,7 @@
   import type { PageData } from './$types';
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
   import { richTextResolver } from '@storyblok/richtext';
+  import ContactCTA from '$lib/components/elements/ContactCTA.svelte';
 
   export let data: PageData;
 
@@ -187,3 +188,4 @@
     <div class="col-span-full"></div>
   </main>
 </div>
+<ContactCTA />

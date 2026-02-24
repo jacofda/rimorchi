@@ -138,9 +138,7 @@
 {@render children()}
 
 <!-- Modern Footer with gradient design -->
-<footer
-  class="from-secondary via-secondary/50 to-secondary relative overflow-hidden bg-linear-to-br"
->
+<footer class="bg-secondary relative overflow-hidden">
   <!-- Animated gradient overlay -->
   <div
     class="from-secondary/30 to-primary/30 absolute inset-0 bg-linear-to-tr via-transparent opacity-50"
