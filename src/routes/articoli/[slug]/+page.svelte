@@ -2,6 +2,7 @@
   import type { PageData } from './$types';
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
   import { richTextResolver } from '@storyblok/richtext';
+  import Gallery from '$lib/components/Gallery.svelte';
 
   export let data: PageData;
 
@@ -46,22 +47,12 @@
 
     {#if data.articolo.content.galleria && data.articolo.content.galleria.length > 0}
       <div class="mb-8">
-        <h2
-          class="from-secondary via-secondary/50 to-secondary mb-6 bg-linear-to-r bg-clip-text text-2xl font-bold text-transparent"
-        >
-          Galleria
-        </h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {#each data.articolo.content.galleria as immagine}
-            <div class="overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
-              <img
-                src={immagine.filename}
-                alt={immagine.alt || data.articolo.content.titolo}
-                class="h-64 w-full object-cover"
-              />
-            </div>
-          {/each}
-        </div>
+        <Gallery
+          images={data.articolo.content.galleria.map((img) => ({
+            filename: img.filename,
+            alt: img.alt || data.articolo.content.titolo,
+          }))}
+        />
       </div>
     {/if}
 
