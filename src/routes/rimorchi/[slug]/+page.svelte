@@ -115,7 +115,7 @@
           </h2>
           <div class="mt-2 flex items-center gap-2">
             <span
-              class="rounded-full bg-white/30 px-3 py-1 text-sm font-semibold text-white backdrop-blur-sm"
+              class="rounded-xl bg-white/30 px-3 py-1 text-sm font-semibold text-white backdrop-blur-sm"
             >
               {data.trailer.content.numero_assi}
               {Number(data.trailer.content.numero_assi) === 1 ? 'Asse' : 'Assi'}
@@ -123,15 +123,15 @@
             {#if Number(data.trailer.content.numero_assi) > 1}
               <div class="flex w-full flex-1 flex-col gap-1">
                 <div
-                  class="h-1 w-full rounded-full bg-linear-to-r from-white/50 to-transparent"
+                  class="h-1 w-full rounded-xl bg-linear-to-r from-white/50 to-transparent"
                 ></div>
                 <div
-                  class="h-1 w-full rounded-full bg-linear-to-r from-white/50 to-transparent"
+                  class="h-1 w-full rounded-xl bg-linear-to-r from-white/50 to-transparent"
                 ></div>
               </div>
             {:else}
               <div
-                class="h-1 flex-1 rounded-full bg-linear-to-r from-white/50 to-transparent"
+                class="h-1 flex-1 rounded-xl bg-linear-to-r from-white/50 to-transparent"
               ></div>
             {/if}
           </div>

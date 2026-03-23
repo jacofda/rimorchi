@@ -106,7 +106,7 @@
   <div class="relative container mx-auto px-4">
     <!-- Filter buttons -->
     <div class="mb-16">
-      <div class="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+      <div class="mx-auto max-w-4xl rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
         <h3 class="mb-4 text-center text-lg font-semibold text-gray-900">Filtra per categoria</h3>
         <div class="flex flex-wrap justify-center gap-3">
           <button
@@ -164,7 +164,7 @@
             <!-- Image section - now on top -->
             <div class="relative overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 p-8">
               <div
-                class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5 transition-transform duration-500 group-hover:scale-105"
+                class="relative overflow-hidden rounded-xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5 transition-transform duration-500 group-hover:scale-105"
               >
                 <img
                   src={imagesByPic[pic as keyof typeof imagesByPic]}
@@ -174,7 +174,7 @@
               </div>
               <!-- Decorative element -->
               <div
-                class="bg-secondary/5 absolute -top-12 -right-12 h-48 w-48 rounded-full blur-3xl"
+                class="bg-secondary/5 absolute -top-12 -right-12 h-48 w-48 rounded-xl blur-3xl"
               ></div>
             </div>
 

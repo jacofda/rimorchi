@@ -60,7 +60,7 @@
         <dl class="mt-12 space-y-6">
           <!-- Address Card -->
           <div
-            class="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-blue-500/50"
+            class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-blue-500/50"
           >
             <div class="flex gap-x-5">
               <dt class="flex-none">
@@ -98,7 +98,7 @@
 
           <!-- Phone Card -->
           <div
-            class="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-blue-500/50"
+            class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-blue-500/50"
           >
             <div class="flex gap-x-5">
               <dt class="flex-none">
@@ -136,7 +136,7 @@
 
           <!-- Email Card -->
           <div
-            class="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-blue-500/50"
+            class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-blue-500/50"
           >
             <div class="flex gap-x-5">
               <dt class="flex-none">
@@ -175,7 +175,7 @@
 
         <!-- Opening Hours (Optional Enhancement) -->
         <div
-          class="from-secondary/5 to-secondary/10 ring-secondary/50 mt-10 rounded-2xl bg-linear-to-br p-6 ring-1"
+          class="from-secondary/5 to-secondary/10 ring-secondary/50 mt-10 rounded-xl bg-linear-to-br p-6 ring-1"
         >
           <h3 class="mb-3 text-lg font-semibold text-gray-900">Orari di Apertura</h3>
           <div class="space-y-2 text-sm text-gray-600">
@@ -200,7 +200,7 @@
     <div class="relative px-6 pb-20 lg:px-8 lg:py-16">
       <div class="h-full min-h-125 lg:min-h-175">
         <div
-          class="relative h-full overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/10 transition-all duration-300 hover:shadow-2xl hover:ring-blue-500/50"
+          class="relative h-full overflow-hidden rounded-xl shadow-xl ring-1 ring-gray-900/10 transition-all duration-300 hover:shadow-2xl hover:ring-blue-500/50"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2770.383139107173!2d11.590744211790028!3d46.02350337096805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778934a79038233%3A0x208cae1f9749c7c4!2sOmg%20Officine%20Meccaniche%20Giacomella!5e0!3m2!1sen!2sit!4v1771422654690!5m2!1sen!2sit"

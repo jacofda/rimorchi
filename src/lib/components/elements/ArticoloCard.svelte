@@ -18,7 +18,7 @@
     {/if}
     {#if showtag && story.content.tag}
       <div
-        class="from-secondary via-secondary/90 to-secondary absolute top-4 right-4 rounded-full bg-linear-to-r px-4 py-2 text-sm font-semibold text-white shadow-lg"
+        class="from-secondary via-secondary/90 to-secondary absolute top-4 right-4 rounded-xl bg-linear-to-r px-4 py-2 text-sm font-semibold text-white shadow-lg"
       >
         {story.content.tag}
       </div>

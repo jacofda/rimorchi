@@ -153,7 +153,7 @@
     <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
       <!-- Company Info -->
       <div class="flex flex-col items-center space-y-4 text-center md:items-start md:text-left">
-        <div class="overflow-hidden rounded-full bg-white/20 p-3 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl bg-white/20 p-3 backdrop-blur-sm">
           <img src={logoCircle} alt="Officine Meccaniche Giacomella" class="h-16 w-auto" />
         </div>
         <p class="leading-relaxed text-white/90">
@@ -264,14 +264,14 @@
           <a
             href="https://www.facebook.com/OMG-Giacomella-Valsugana-Caravan-478178735617031/"
             target="_blank"
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
           >
             <span class="text-xl">f</span>
           </a>
           <a
             href="https://www.google.com/search?q=rimorchi+vsomg&oq=rimorchi+vsomg"
             target="_blank"
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
           >
             <span class="text-xl">G</span>
           </a>
@@ -279,7 +279,7 @@
             href="https://www.google.it/maps/place/O.M.G.+Officine+Meccaniche+Giacomella/@46.023444,11.5910473,17z/data=!3m1!4b1!4m2!3m1!1s0x4778934a79038233:0x208cae1f9749c7c4"
             target="_blank"
             title="O.M.G. Officine Meccaniche Giacomella su Google Maps"
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-5 fill-white">
               <path
@@ -290,7 +290,7 @@
           <a
             href="mailto:giacomella.rimorchi@gmail.com"
             title="email"
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white/30"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-5 fill-white">
               <path

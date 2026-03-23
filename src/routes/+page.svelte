@@ -131,11 +131,11 @@
       <!-- Card 1: Rimorchi Personalizzati -->
       <a
         href="/rimorchi"
-        class="group hover:ring-primary/50 relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+        class="group hover:ring-primary/50 relative overflow-hidden rounded-xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       >
         <div class="flex flex-col items-start">
           <div
-            class="bg-primary/10 text-primary group-hover:bg-primary/20 mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+            class="bg-primary/10 text-primary group-hover:bg-primary/20 mb-6 flex h-16 w-16 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
               <path
@@ -168,18 +168,18 @@
           >
         </div>
         <div
-          class="bg-primary/5 group-hover:bg-primary/10 absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full blur-2xl transition-all duration-300"
+          class="bg-primary/5 group-hover:bg-primary/10 absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-xl blur-2xl transition-all duration-300"
         ></div>
       </a>
 
       <!-- Card 2: Portata fino a 1500kg -->
       <a
         href="/articoli"
-        class="group hover:ring-secondary/50 relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+        class="group hover:ring-secondary/50 relative overflow-hidden rounded-xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       >
         <div class="flex flex-col items-start">
           <div
-            class="bg-secondary/10 text-secondary group-hover:bg-secondary/20 mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+            class="bg-secondary/10 text-secondary group-hover:bg-secondary/20 mb-6 flex h-16 w-16 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
               >
@@ -213,18 +213,18 @@
           </span>
         </div>
         <div
-          class="bg-secondary/5 group-hover:bg-secondary/10 absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full blur-2xl transition-all duration-300"
+          class="bg-secondary/5 group-hover:bg-secondary/10 absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-xl blur-2xl transition-all duration-300"
         ></div>
       </a>
 
       <!-- Card 3: Costruzione su Misura -->
       <a
         href="/contatti"
-        class="group hover:ring-tertiary/50 relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+        class="group hover:ring-tertiary/50 relative overflow-hidden rounded-xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
       >
         <div class="flex flex-col items-start">
           <div
-            class="bg-tertiary/10 text-tertiary group-hover:bg-tertiary/20 mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-110"
+            class="bg-tertiary/10 text-tertiary group-hover:bg-tertiary/20 mb-6 flex h-16 w-16 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
               <path
@@ -257,7 +257,7 @@
           </span>
         </div>
         <div
-          class="bg-tertiary/5 group-hover:bg-tertiary/10 absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full blur-2xl transition-all duration-300"
+          class="bg-tertiary/5 group-hover:bg-tertiary/10 absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-xl blur-2xl transition-all duration-300"
         ></div>
       </a>
     </div>
@@ -297,17 +297,17 @@
         </div>
       </div>
       <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-primary text-4xl font-bold">1500kg</div>
           <div class="mt-2 text-sm font-semibold text-gray-900">Portata Massima</div>
           <div class="mt-1 text-xs text-gray-600">Robustezza garantita</div>
         </div>
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-secondary text-4xl font-bold">100%</div>
           <div class="mt-2 text-sm font-semibold text-gray-900">Su Misura</div>
           <div class="mt-1 text-xs text-gray-600">Personalizzazione totale</div>
         </div>
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-tertiary text-4xl font-bold">
             <svg
               class="h-10 w-10"
@@ -326,7 +326,7 @@
           <div class="mt-2 text-sm font-semibold text-gray-900">Qualità</div>
           <div class="mt-1 text-xs text-gray-600">Materiali certificati</div>
         </div>
-        <div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
+        <div class="rounded-xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5">
           <div class="text-4xl font-bold text-gray-900">
             <svg
               class="text-primary h-10 w-10"

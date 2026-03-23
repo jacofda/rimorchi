@@ -51,7 +51,7 @@
 
   <!-- Content container -->
   <div class="relative container mx-auto px-4 py-16 sm:py-20">
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-[1fr_auto] md:items-center">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
       <!-- Left: Title and subtitle -->
       <div class="space-y-4">
         <h1 class="text-secondary text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">

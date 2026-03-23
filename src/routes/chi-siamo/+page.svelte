@@ -179,7 +179,7 @@
       <!-- Old image -->
       <div class="mx-auto mt-16 max-w-5xl">
         <img
-          class="aspect-video w-full rounded-2xl object-cover shadow-xl"
+          class="aspect-video w-full rounded-xl object-cover shadow-xl"
           alt="Storia OMG"
           width="1140"
           height="475"
@@ -211,7 +211,7 @@
               <div class="w-px bg-gray-300" style="height: calc(100% + 3rem);"></div>
             </div>
             <div class="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
-              <div class="bg-secondary h-2 w-2 rounded-full ring-1 ring-gray-300"></div>
+              <div class="bg-secondary h-2 w-2 rounded-xl ring-1 ring-gray-300"></div>
             </div>
             <div class="flex-auto">
               <div class="flex items-center gap-x-4">
@@ -252,7 +252,7 @@
               <div class="w-px bg-gray-300" style="height: calc(100% + 3rem);"></div>
             </div>
             <div class="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
-              <div class="bg-secondary h-2 w-2 rounded-full ring-1 ring-gray-300"></div>
+              <div class="bg-secondary h-2 w-2 rounded-xl ring-1 ring-gray-300"></div>
             </div>
             <div class="flex-auto">
               <div class="flex items-center gap-x-4">
@@ -288,7 +288,7 @@
               <div class="w-px bg-gray-300" style="height: calc(100% + 3rem);"></div>
             </div>
             <div class="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
-              <div class="bg-secondary h-2 w-2 rounded-full ring-1 ring-gray-300"></div>
+              <div class="bg-secondary h-2 w-2 rounded-xl ring-1 ring-gray-300"></div>
             </div>
             <div class="flex-auto">
               <div class="flex items-center gap-x-4">

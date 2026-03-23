@@ -4,6 +4,7 @@ export interface ArticoloContent {
   tag: string;
   _uid: string;
   titolo: string;
+  sottotitolo?: string;
   abstract: string;
   galleria: Immagine[];
   immagine: Immagine;

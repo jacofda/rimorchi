@@ -2,10 +2,13 @@
   import type { PageData } from './$types';
   import PageHeader from '$lib/components/elements/PageHeader.svelte';
   import ArticoloCard from '$lib/components/elements/ArticoloCard.svelte';
+  import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
 
   export let data: PageData;
 
-  let activeFilter: string = 'tutti';
+  // Derive activeFilter directly from $page.url.searchParams for reactivity
+  $: activeFilter = $page.url.searchParams.get('activeFilter') || 'tutti';
 
   // Get unique tags from all articles
   $: uniqueTags = Array.from(
@@ -19,6 +22,17 @@
     }
     return data.stories.filter((s: any) => s.content.tag === activeFilter);
   })();
+
+  function gotoFilter(filter: string) {
+    const url = new URL(window.location.href);
+    if (filter === 'Tutti') {
+      url.searchParams.delete('activeFilter');
+    } else {
+      url.searchParams.set('activeFilter', filter);
+    }
+    goto(url.pathname + url.search, { replaceState: false });
+    activeFilter = filter;
+  }
 </script>
 
 <PageHeader
@@ -29,12 +43,11 @@
 
 <div class="container mx-auto px-4 py-16">
   <section class="pb-10">
-    <!-- Filter buttons with gradient effects -->
     <div class="mb-12 flex flex-wrap justify-center gap-3">
       <button
-        class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
+        class={`rounded-xl px-8 py-3 font-semibold transition-all duration-300 ${
           activeFilter === 'tutti'
-            ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
+            ? 'bg-secondary scale-105  text-white shadow-xl'
             : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
         }`}
         on:click={() => (activeFilter = 'tutti')}
@@ -43,14 +56,14 @@
       </button>
       {#each uniqueTags as tag}
         <button
-          class={`rounded-full px-8 py-3 font-semibold transition-all duration-300 ${
+          class={`cursor-pointer rounded-xl px-8 py-3 font-semibold transition-all duration-300 ${
             activeFilter === tag
-              ? 'from-secondary via-secondary/50 to-secondary scale-105 bg-linear-to-r text-white shadow-xl'
+              ? 'bg-secondary scale-105 text-white shadow-xl'
               : 'bg-white/80 text-gray-700 shadow backdrop-blur-sm hover:scale-105 hover:shadow-lg'
           }`}
-          on:click={() => (activeFilter = tag)}
+          on:click={() => gotoFilter(tag)}
         >
-          {tag}
+          {tag.charAt(0).toUpperCase() + tag.slice(1)}
         </button>
       {/each}
     </div>
