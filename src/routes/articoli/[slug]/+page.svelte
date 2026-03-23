@@ -83,12 +83,6 @@
 <div class="container mx-auto px-4 pt-8 pb-16 lg:pt-16">
   <div class="grid grid-cols-12 lg:gap-8">
     <main class="col-span-12 min-w-0 overflow-hidden lg:col-span-9">
-      {#if data.articolo.content.sottotitolo}
-        <h2 class="mb-8 text-2xl font-semibold text-gray-600">
-          {data.articolo.content.sottotitolo}
-        </h2>
-      {/if}
-
       {#if data.articolo.content.immagine?.filename}
         <div class="overflow-hidden rounded-xl">
           <img
@@ -97,6 +91,12 @@
             class="aspect-2/1 h-auto w-full object-cover"
           />
         </div>
+      {/if}
+
+      {#if data.articolo.content.abstract}
+        <h2 class="my-8 px-2 text-2xl font-semibold text-gray-600">
+          {data.articolo.content.abstract}
+        </h2>
       {/if}
 
       {#if data.articolo.content.descrizione}
@@ -130,9 +130,7 @@
       </div>
     </main>
 
-    <aside
-      class="col-span-12 flex flex-col gap-6 lg:sticky lg:top-12 lg:col-span-3 lg:self-start lg:pt-16"
-    >
+    <aside class="col-span-12 flex flex-col gap-6 lg:sticky lg:top-32 lg:col-span-3 lg:self-start">
       <div class="overflow-hidden rounded-xl bg-white shadow-lg">
         <div class="bg-secondary px-5 py-3">
           <h3 class="text-lg font-bold text-white">Ultimi Articoli</h3>

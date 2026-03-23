@@ -36,7 +36,7 @@ export const load: PageLoad = async ({ params, parent }) => {
     }),
     storyblokAPI.get('cdn/stories', {
       version: 'draft',
-      per_page: 5,
+      per_page: 4,
       sort_by: 'published_at:desc',
       filter_query: {
         component: {
