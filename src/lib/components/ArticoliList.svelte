@@ -16,4 +16,12 @@
   {:else}
     <p class="text-center text-gray-500">Nessun articolo trovato.</p>
   {/if}
+  <div class="mt-10 text-center">
+    <a
+      href="/articoli"
+      class="bg-secondary inline-block rounded-lg px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-200 hover:opacity-90"
+    >
+      Vedi tutti gli articoli
+    </a>
+  </div>
 </section>

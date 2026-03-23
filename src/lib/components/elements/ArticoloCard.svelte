@@ -27,6 +27,11 @@
 
   <!-- Content -->
   <div class="p-6">
+    {#if story.published_at}
+      <p class="mb-2 text-xs text-gray-400">
+        {new Date(story.published_at).toLocaleDateString('it-IT', { day: '2-digit', month: 'long', year: 'numeric' })}
+      </p>
+    {/if}
     <h3 class="group-hover:text-secondary mb-2 text-xl font-bold text-gray-900 transition-colors">
       {story.content.titolo}
     </h3>
