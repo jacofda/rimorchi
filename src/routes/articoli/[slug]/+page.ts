@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import type { ArticoloContent } from '../+page';
 
@@ -30,21 +31,32 @@ interface ArticoloDetailStory {
 export const load: PageLoad = async ({ params, parent }) => {
   const { storyblokAPI } = await parent();
 
-  const [articleResponse, latestResponse] = await Promise.all([
-    storyblokAPI.get(`cdn/stories/articoli/${params.slug}`, {
-      version: 'draft',
-    }),
-    storyblokAPI.get('cdn/stories', {
-      version: 'draft',
-      per_page: 4,
-      sort_by: 'published_at:desc',
-      filter_query: {
-        component: {
-          in: 'articolo',
+  let articleResponse: Awaited<ReturnType<typeof storyblokAPI.get>>;
+  let latestResponse: Awaited<ReturnType<typeof storyblokAPI.get>>;
+
+  try {
+    [articleResponse, latestResponse] = await Promise.all([
+      storyblokAPI.get(`cdn/stories/articoli/${params.slug}`, {
+        version: 'draft',
+      }),
+      storyblokAPI.get('cdn/stories', {
+        version: 'draft',
+        per_page: 4,
+        sort_by: 'published_at:desc',
+        filter_query: {
+          component: {
+            in: 'articolo',
+          },
         },
-      },
-    }),
-  ]);
+      }),
+    ]);
+  } catch (e: any) {
+    const status = e?.response?.status ?? e?.status;
+    if (status === 404) throw error(404, 'Articolo non trovato');
+    throw e;
+  }
+
+  if (!articleResponse.data?.story) throw error(404, 'Articolo non trovato');
 
   const articolo = articleResponse.data.story as ArticoloDetailStory;
   const latestArticoli = (latestResponse.data.stories as ArticoloDetailStory[]).filter(

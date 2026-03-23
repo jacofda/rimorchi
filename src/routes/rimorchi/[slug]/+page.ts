@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import type { TrailerContent } from '../+page';
 
@@ -30,9 +31,19 @@ interface TrailerDetailStory {
 export const load: PageLoad = async ({ params, parent }) => {
   const { storyblokAPI } = await parent();
 
-  const response = await storyblokAPI.get(`cdn/stories/${params.slug}`, {
-    version: 'draft',
-  });
+  let response: Awaited<ReturnType<typeof storyblokAPI.get>>;
+
+  try {
+    response = await storyblokAPI.get(`cdn/stories/${params.slug}`, {
+      version: 'draft',
+    });
+  } catch (e: any) {
+    const status = e?.response?.status ?? e?.status;
+    if (status === 404) throw error(404, 'Rimorchio non trovato');
+    throw e;
+  }
+
+  if (!response.data?.story) throw error(404, 'Rimorchio non trovato');
 
   return {
     trailer: response.data.story as TrailerDetailStory,
