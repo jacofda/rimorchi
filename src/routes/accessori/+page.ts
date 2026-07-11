@@ -1,12 +1,11 @@
 import type { PageLoad } from './$types';
 
-export interface ArticoloContent {
-  tag: string;
+export const ssr = true;
+
+export interface AccessorioContent {
   _uid: string;
+  attivo: boolean;
   titolo: string;
-  sottotitolo?: string;
-  abstract: string;
-  galleria: Immagine[];
   immagine: Immagine;
   component: string;
   descrizione: any;
@@ -30,19 +29,22 @@ export interface Immagine {
 export const load: PageLoad = async ({ parent }) => {
   const { storyblokAPI } = await parent();
 
-  interface ArticoloStory {
+  interface AccessorioStory {
     name: string;
     slug: string;
-    content: ArticoloContent;
+    content: AccessorioContent;
   }
 
-  const [response, accessoriResponse, usatoResponse] = await Promise.all([
+  const [response, articoliResponse, usatoResponse] = await Promise.all([
     storyblokAPI.get('cdn/stories', {
       version: 'draft',
       per_page: 40,
       filter_query: {
         component: {
-          in: 'articolo',
+          in: 'Accessori',
+        },
+        attivo: {
+          is: true,
         },
       },
     }),
@@ -52,10 +54,7 @@ export const load: PageLoad = async ({ parent }) => {
       sort_by: 'published_at:desc',
       filter_query: {
         component: {
-          in: 'Accessori',
-        },
-        attivo: {
-          is: true,
+          in: 'articolo',
         },
       },
     }),
@@ -75,8 +74,8 @@ export const load: PageLoad = async ({ parent }) => {
   ]);
 
   return {
-    stories: response.data.stories as ArticoloStory[],
-    latestAccessori: accessoriResponse.data.stories,
+    stories: response.data.stories as AccessorioStory[],
+    latestArticoli: articoliResponse.data.stories,
     latestUsato: usatoResponse.data.stories,
   };
 };

@@ -1,11 +1,12 @@
 import type { PageLoad } from './$types';
 
-export interface ArticoloContent {
-  tag: string;
+export interface UsatoContent {
   _uid: string;
+  anno: string;
+  marca: string;
+  attivo: boolean;
   titolo: string;
   sottotitolo?: string;
-  abstract: string;
   galleria: Immagine[];
   immagine: Immagine;
   component: string;
@@ -30,16 +31,29 @@ export interface Immagine {
 export const load: PageLoad = async ({ parent }) => {
   const { storyblokAPI } = await parent();
 
-  interface ArticoloStory {
+  interface UsatoStory {
     name: string;
     slug: string;
-    content: ArticoloContent;
+    content: UsatoContent;
   }
 
-  const [response, accessoriResponse, usatoResponse] = await Promise.all([
+  const [response, articoliResponse, accessoriResponse] = await Promise.all([
     storyblokAPI.get('cdn/stories', {
       version: 'draft',
       per_page: 40,
+      filter_query: {
+        component: {
+          in: 'Usato',
+        },
+        attivo: {
+          is: true,
+        },
+      },
+    }),
+    storyblokAPI.get('cdn/stories', {
+      version: 'draft',
+      per_page: 4,
+      sort_by: 'published_at:desc',
       filter_query: {
         component: {
           in: 'articolo',
@@ -59,24 +73,13 @@ export const load: PageLoad = async ({ parent }) => {
         },
       },
     }),
-    storyblokAPI.get('cdn/stories', {
-      version: 'draft',
-      per_page: 4,
-      sort_by: 'published_at:desc',
-      filter_query: {
-        component: {
-          in: 'Usato',
-        },
-        attivo: {
-          is: true,
-        },
-      },
-    }),
   ]);
 
+  const stories = (response.data.stories as UsatoStory[]).filter((s) => s.content.attivo);
+
   return {
-    stories: response.data.stories as ArticoloStory[],
+    stories,
+    latestArticoli: articoliResponse.data.stories,
     latestAccessori: accessoriResponse.data.stories,
-    latestUsato: usatoResponse.data.stories,
   };
 };
