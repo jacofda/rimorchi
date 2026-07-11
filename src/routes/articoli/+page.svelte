@@ -7,6 +7,15 @@
   export let data: PageData;
 </script>
 
+<svelte:head>
+  <title>Articoli e progetti speciali | Officine Meccaniche Giacomella</title>
+  <meta
+    name="description"
+    content="Scopri i nostri articoli e progetti speciali dedicati al mondo dei rimorchi delle Officine Meccaniche Giacomella."
+  />
+  <meta name="keywords" content="articoli, progetti speciali, rimorchi, giacomella, valsugana" />
+</svelte:head>
+
 <PageHeader
   title="Articoli"
   subtitle="Scopri i nostri articoli e progetti speciali"

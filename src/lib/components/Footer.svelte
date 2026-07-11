@@ -1,21 +1,19 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import logoCaravan from '$lib/assets/logo-caravan.png';
+  import logoCircle from '$lib/assets/logo-circle.png';
 
   onMount(() => {
     const loader = () => {
       const s = document.createElement('script');
       s.src = 'https://cdn.iubenda.com/iubenda.js';
-      const tag = document.getElementsByTagName('script')[0];
-      tag.parentNode.insertBefore(s, tag);
+      document.head.appendChild(s);
     };
 
-    if (window.addEventListener) {
-      window.addEventListener('load', loader, false);
-    } else if (window.attachEvent) {
-      window.attachEvent('onload', loader);
+    if (document.readyState === 'complete') {
+      loader();
     } else {
-      window.onload = loader;
+      window.addEventListener('load', loader);
     }
   });
 </script>

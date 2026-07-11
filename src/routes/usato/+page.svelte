@@ -7,6 +7,15 @@
   export let data: PageData;
 </script>
 
+<svelte:head>
+  <title>Rimorchi usati in vendita | Officine Meccaniche Giacomella</title>
+  <meta
+    name="description"
+    content="Scopri i nostri rimorchi usati in vendita: occasioni selezionate e controllate dalle Officine Meccaniche Giacomella in Valsugana."
+  />
+  <meta name="keywords" content="rimorchi usati, usato, occasioni, giacomella, valsugana, vendita" />
+</svelte:head>
+
 <PageHeader
   title="Usato"
   subtitle="Scopri i nostri rimorchi usati"

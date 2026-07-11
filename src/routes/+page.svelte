@@ -5,6 +5,15 @@
   export let data;
 </script>
 
+<svelte:head>
+  <title>Rimorchi su misura in Valsugana | Officine Meccaniche Giacomella</title>
+  <meta
+    name="description"
+    content="Rimorchi professionali su misura, articoli e accessori. Officine Meccaniche Giacomella, produzione e assistenza rimorchi in Valsugana."
+  />
+  <meta name="keywords" content="rimorchi, rimorchi su misura, valsugana, giacomella, trasporti, accessori" />
+</svelte:head>
+
 <!-- Hero Section -->
 <div
   class="from-secondary/1 via-secondary/5 to-secondary/1 relative isolate overflow-hidden bg-linear-to-b"
