@@ -1,6 +1,7 @@
 <script lang="ts">
   import RimorchioDoppiaAsse from '$lib/assets/rimorchio-doppia-asse.jpg';
   import RimorchioSpondeRinforate from '$lib/assets/rimorchio-sponde-rinforzate.jpg';
+  import LogoCircle from '$lib/assets/logo-circle.png';
   import ArticoliList from '../lib/components/ArticoliList.svelte';
   export let data;
 </script>
@@ -11,7 +12,10 @@
     name="description"
     content="Rimorchi professionali su misura, articoli e accessori. Officine Meccaniche Giacomella, produzione e assistenza rimorchi in Valsugana."
   />
-  <meta name="keywords" content="rimorchi, rimorchi su misura, valsugana, giacomella, trasporti, accessori" />
+  <meta
+    name="keywords"
+    content="rimorchi, rimorchi su misura, valsugana, giacomella, trasporti, accessori"
+  />
 </svelte:head>
 
 <!-- Hero Section -->
@@ -50,7 +54,8 @@
   </div>
 
   <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-    <div class="mx-auto max-w-2xl text-center">
+    <div class="mx-auto max-w-3xl text-center">
+      <img src={LogoCircle} alt="Officine Meccaniche Giacomella" class="mx-auto mb-8 h-auto w-40" />
       <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
         <span class="text-secondary">Rimorchi Personalizzati</span>
         <br />su Misura
