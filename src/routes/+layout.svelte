@@ -1,5 +1,6 @@
 <script lang="ts">
   import favicon from '$lib/assets/favicon.ico';
+  import { page } from '$app/state';
 
   import menuCaravan from '$lib/assets/menu-caravan.png';
   import logoRimorchi from '$lib/assets/logo-rimorchi.png';
@@ -26,6 +27,11 @@
     { name: 'Usato', href: '/usato' },
     { name: 'Contatti', href: '/contatti' },
   ];
+
+  const isActive = (href: string) => {
+    const path = page.url.pathname;
+    return href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
+  };
 </script>
 
 <svelte:head>
@@ -69,7 +75,10 @@
         {#each links as link}
           <a
             href={link.href}
-            class="hover:text-tertiary font-semibold transition-all hover:scale-105"
+            aria-current={isActive(link.href) ? 'page' : undefined}
+            class={`hover:text-tertiary font-semibold transition-all hover:scale-105 ${
+              isActive(link.href) ? 'text-tertiary underline underline-offset-4' : ''
+            }`}
           >
             {link.name}
           </a>
@@ -110,7 +119,10 @@
             <a
               href={link.href}
               onclick={closeMenu}
-              class="rounded-lg px-4 py-3 font-semibold transition-all hover:bg-white/20"
+              aria-current={isActive(link.href) ? 'page' : undefined}
+              class={`rounded-lg px-4 py-3 font-semibold transition-all hover:bg-white/20 ${
+                isActive(link.href) ? 'bg-white/20 text-tertiary' : ''
+              }`}
             >
               {link.name}
             </a>

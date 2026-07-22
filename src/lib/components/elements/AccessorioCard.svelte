@@ -26,7 +26,7 @@
       {story.content.titolo}
     </h3>
     {#if story.content.descrizione}
-      <div class="prose prose-sm max-w-none text-gray-600">
+      <div class="prose prose-sm max-w-none text-[14px]! text-gray-600">
         {@html resolver.render(story.content.descrizione)}
       </div>
     {/if}
