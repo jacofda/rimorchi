@@ -106,7 +106,12 @@
 
         <div class="flex flex-col gap-2">
           <a
-            href="https://www.iubenda.com/privacy-policy/68178934/cookie-policy"
+            href="https://www.iubenda.com/privacy-policy/94644724"
+            class="iubenda-white iubenda-noiframe iubenda-embed w-26!"
+            title="Privacy Policy ">Privacy Policy</a
+          >
+          <a
+            href="https://www.iubenda.com/privacy-policy/94644724/cookie-policy"
             class="iubenda-white iubenda-noiframe iubenda-embed w-26!"
             title="Cookie Policy ">Cookie Policy</a
           >
