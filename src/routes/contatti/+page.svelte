@@ -125,10 +125,10 @@
               <dd class="flex-auto">
                 <h3 class="mb-1 text-sm font-semibold text-gray-900">Telefono</h3>
                 <a
-                  href="tel:+390461123456"
+                  href="tel:+390461765169"
                   class="text-base font-medium text-gray-600 transition-colors hover:text-green-600"
                 >
-                  +39 0461 123456
+                  +39 0461 765169
                 </a>
               </dd>
             </div>
